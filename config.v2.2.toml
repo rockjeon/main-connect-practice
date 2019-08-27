@@ -1,0 +1,33 @@
+# This config should be placed in following path:
+#   %AppData%\Parity\Ethereum\config.toml
+
+[parity]
+# Custom chain
+chain = "krwcoin-v2.2.json"
+# No updates will be auto-installed
+auto_update = "none"
+# Blockchain and settings will be stored in data.
+base_path = "data"
+
+[network]
+# Override the bootnodes from selected chain file.
+# reserved_peers = "C:\\Users\user\\works\\chainworks\\reserved-bootnodes-v2.1.txt"
+reserved_peers = "reserved-bootnodes-v2.2.txt"
+
+[rpc]
+# Allows Cross-Origin Requests from domain ''.
+cors = ["*"]
+
+
+[mining]
+# Account address to receive reward when block is mined.
+author = "0xA65DFee6C272053809D68129246629cf1B58C89D"
+extra_data = "rockjeon"
+
+[footprint]
+# Compute and Store tracing data. (Enables trace_* APIs).
+tracing = "on"
+# Keep all state trie data. No pruning.
+pruning = "archive"
+# Enables Fat DB
+fat_db = "on"
